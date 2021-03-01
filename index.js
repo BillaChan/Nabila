@@ -103,7 +103,7 @@ const vcard = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
 + 'FN:Nabilla\n' // Nama
 + 'ORG:Owner;\n' // Nama bot
-+ 'TEL;type=CELL;type=VOICE;waid=6288706650883:+6288706650883\n' // Nomor bot
++ 'TEL;type=CELL;type=VOICE;waid=17172205189:+17172205189\n' // Nomor bot
 + 'END:VCARD' 
 
 
@@ -938,11 +938,9 @@ contextInfo: {
   mentionedJid: [sender]
 }
   }
-  lxa.sendMessage(from, Menu, text, { 
-quoted: { key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "Made With Nabilla❤", 'jpegThumbnail': fs.readFileSync('./src/image/help.jpg')}}}})
-				})
+  Lxa.sendMessage(from, Menu, text, { 
+quoted: { key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "Made With Nabilla❤", 'jpegThumbnail': fs.readFileSync('./src/help.jpeg')}}}})
 break
-
 //--Cek limit user
 case 'ceklimit':
   if (!isRegister) return reply(mess.only.daftarB)
@@ -1058,7 +1056,7 @@ break
 
 //---donasi
 case 'donasi':
-Lxa.updatePresence(from, Presence.composing)
+ Lxa.updatePresence(from, Presence.composing)
 if (!isRegister) return reply(mess.only.daftarB)
 hasil = `Bantu donasi agar bot bisa terus berjalan.
 
