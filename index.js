@@ -83,7 +83,7 @@ const NamaBot = up.NamaBot;
 const Ig = up.Ig;
 const Wa1 = up.Wa1;
 const Wa2 = up.Wa2;
-const Ovo = up.Ovo;
+const Gopay = up.Gopay;
 const Pulsa = up.Pulsa;
 const Dana = up.Dana;
 const blocked = [];
@@ -101,9 +101,9 @@ lolKey = up.LolHumanKey
 //--Kontak
 const vcard = 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
-+ 'FN:Mrf.zvx\n' // Nama
-+ 'ORG:Lexa bot;\n' // Nama bot
-+ 'TEL;type=CELL;type=VOICE;waid=6282223014661:+62 822-2301-4661\n' // Nomor bot
++ 'FN:Nabilla\n' // Nama
++ 'ORG:Owner;\n' // Nama bot
++ 'TEL;type=CELL;type=VOICE;waid=6288706650883:+6288706650883\n' // Nomor bot
 + 'END:VCARD' 
 
 
@@ -318,21 +318,21 @@ Ketik ${prefix}verify untuk memulai menggunakan bot.`
 			const isCmd = body.startsWith(prefix)
       const is = budy.slice(0).trim().split(/ +/).shift().toLowerCase()
 			mess = {
-  wait: '*☐* Silahkan tunggu',
-  success: '*☉* Berhasil',
-  Public: '*☒* fitur dalam mode private sekarang hanya owner yang dapat menggunakan bot',
+  wait: '*《WAIT》* Silahkan tunggu',
+  success: '*《Succes》* ',
+  Public: '*🗿* fitur dalam mode private sekarang hanya owner yang dapat menggunakan bot',
   ferr: 'Maaf sepertinya fitur sedang Error',
   limitend: 'Maaf limit kamu telah habis, silahkan lakukan pembelian ulang.',
   error: {
-  stick: '*☒* Silakan ulangi beberapa saat lagi',
-  Iv: '*☒* Link Error'
+  stick: '*🗿* Silakan ulangi beberapa saat lagi',
+  Iv: '*🗿* Link Error'
   },
   only: {
-    group: '*☒* Fitur ini hanya untuk *GRUP*',
-    ownerG: '*☒* Fitur ini hanya untuk *OWNER GRUP*',
-    ownerB: '*☒* Fitur ini hanya untuk *OWNER BOT*',
-    admin: '*☒* Fitur ini hanya untuk *ADMIN GRUP*',
-    Badmin: '*☒* Jadikan Lexa *ADMIN !*',
+    group: '*🗿* Fitur ini hanya untuk *GRUP*',
+    ownerG: '*🗿* Fitur ini hanya untuk *OWNER GRUP*',
+    ownerB: '*🗿* Fitur ini hanya untuk *OWNER BOT*',
+    admin: '*🗿* Fitur ini hanya untuk *ADMIN GRUP*',
+    Badmin: '*🗿* Jadikan Bot *ADMIN !*',
     daftarB: `Hai, Ketik *${prefix}verify* untuk memulai menggunakan bot`
   }
 }
@@ -536,7 +536,7 @@ const kapankah = ['Hari Lagi',
 
 
 //--Auto respon
-if(budy.match('lexa')){
+if(budy.match('Bil')){
 result = fs.readFileSync(`./temp/stick/emm.webp`)
   Lxa.sendMessage(from, result, sticker, {
 quoted: mek
@@ -547,7 +547,10 @@ quoted: mek
 
 //--Auto respon 2
 switch(is) {
-  case 'bot':
+	case 'bila':
+	case 'Abel':
+	case 'Nabilla':
+  case 'billa':
 buf = fs.readFileSync(`./temp/audio/onichan.mp3`)
 Lxa.sendMessage(from, buf, audio, {
   mimetype: 'audio/mp4', quoted: mek, ptt: true
@@ -563,7 +566,7 @@ case '/help':
 case 'help':
 case 'menu':
 hasil = `        ────────────────
-Hei *${pushname}* coba ketik ${prefix}menu
+Hei ${pushname} coba ketik ${prefix}menu
         ────────────────`
 reply(hasil)
         break
@@ -577,7 +580,7 @@ case '?':
   const uangku = checkATMuser(sender)
   uptime = process.uptime()
   const Menu = {
-text: `    ────✪ 🄼🅁🄵.🅉🅅🅇 ✪────
+text: `    ────✪ NABILLA ✪────
         ────────────────
 〘 *USER* 〙
 ‣ Nama : *${pushname}*
@@ -587,14 +590,14 @@ _Kumpulkan saldo untuk membeli limit_
         ────────────────
 〘 *BOT* 〙
 ‣ Prefix:  *「 ${prefix} 」*
-‣ Nama: *I'm Lexa V.2*
+‣ Script By: Mrf.zvx
+‣ Nama: *I'm Abel*
 ‣ WAConnection: *Baileys*
 ‣ Status online: *${kyun(uptime)}*
 ‣ Mengetik: *ON*
 ‣ Group:  *${groupName}*
 ‣ Jumlah user : *${_registered.length} User*
 ‣ Jumlah chat : *${totalchat.length} Chat*
-‣ Github : https://github.com/mrfzvx12/termux-whatsapp-bot
 ‣ Official group
 • _${Wa1}_
 
@@ -603,7 +606,7 @@ _Kumpulkan saldo untuk membeli limit_
 _${Ig}_
       ────────────────
 ┏━━━━━━━━━━━━━━━━━━━━
-┃─────〘 *I'm Lexa V.2* 〙────
+┃─────〘 *I'm Abel* 〙────
 ┃━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Simi (Teks)*
 ┃ _Simsimi Chat_
@@ -798,18 +801,18 @@ _${Ig}_
 *〘 TEXT 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Tahta (Teks)*
-┃ _Ex : ${prefix}Tahta Lexa_
+┃ _Ex : ${prefix}Tahta Abel_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 TEXT2 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
 ┠⊷️ *${prefix}Ephoto list*
 ┃ _Menampilkan kode text ephoto_
 ┠⊷️ *${prefix}Ephoto (Kode|Teks)*
-┃ _Ex : ${prefix}Ephoto 25|Lexa_
+┃ _Ex : ${prefix}Ephoto 25|Abel_
 ┠⊷️ *${prefix}Textpro list*
 ┃ _Menampilkan kode text textpro_
 ┠⊷️ *${prefix}Textpro (Kode|Teks)*
-┃ _Ex : ${prefix}Textpro 55|Lexa_
+┃ _Ex : ${prefix}Textpro 55|Abel_
 ┗━━━━━━━━━━━━━━━━━━━━
 *〘 PICTURE 〙*
 ┏━━━━━━━━━━━━━━━━━━━━
@@ -935,9 +938,10 @@ contextInfo: {
   mentionedJid: [sender]
 }
   }
-  Lxa.sendMessage(from, Menu, text, {
-quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "Made With ❤️", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABERERESERMVFRMaHBkcGiYjICAjJjoqLSotKjpYN0A3N0A3WE5fTUhNX06MbmJiboyiiIGIosWwsMX46/j///8BERERERIRExUVExocGRwaJiMgICMmOiotKi0qOlg3QDc3QDdYTl9NSE1fToxuYmJujKKIgYiixbCwxfjr+P/////CABEIADoAUQMBIgACEQEDEQH/xAAsAAEAAwEBAQAAAAAAAAAAAAAAAgMFBAYBAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAADwYAAAAAEo2EoeggYctbsPMX7XIZPycABZWNvLoHTfnjTo4x0c4AAAAAAAf//EAC0QAAMAAgEDAwIDCQAAAAAAAAECAwQRAAUSMRMhImGSFCCRJEBBQlBRUmOx/9oACAEBAAE/AP3dFLsqjW2IA2QB+p5PHvUoJxdy7FU7VJ7iPcgcM6AMxRtKwVjrwT4B4Y2Hdub/ABRXb28K2tE/Q74+Nead7yZV+BHcNbDglSPodcKsp0wIOgf14mLeisyKCFAJII/ipf8A4vCrKFJBAYbH1Hj8kXWdFdpJUD+RywB+0g8z8N4dXtiQgHxlo5STuyy2qbbmXTHxhjt2SZ6I4yISuzy/17IZudWImmKoT0bvH9pkHc+DpAQxbma/bTqUE2hwEAlUO/eQjiXMARsnTUvAX/EZxgS7vtUQIAF03OjXcdSxJnbLS0kPzddbPbsFCOUFQQKBge1dBv8AEjY/JJ1m4ZpJQDfwbYB+0g8yOvXybpZ8eHm21AfTesgRuXrOpUpjzj9ELnf3luWyTe+Tek0L2ZmPkBSx3teX6lW4uTKS0v7Wou9v7huY/VDj+l24sG9K5vLff8GOv7NzEy/wl43WEneWivd3a7g2w3sRzKyGybeqyKnwRAq70AihB5/on//EABQRAQAAAAAAAAAAAAAAAAAAAED/2gAIAQIBAT8AR//EABQRAQAAAAAAAAAAAAAAAAAAAED/2gAIAQMBAT8AR//Z", "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw==" } } } })
-  break
+  lxa.sendMessage(from, Menu, text, { 
+quoted: { key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "Made With Nabilla❤", 'jpegThumbnail': fs.readFileSync('./src/image/help.jpg')}}}})
+				})
+break
 
 //--Cek limit user
 case 'ceklimit':
@@ -1026,7 +1030,8 @@ case 'kutuk':
   uptime = process.uptime()
   teks = `*‣ Nama bot* : ${me.name}
   ‣ *Nomor Bot* : @${me.jid.split('@')[0]}
-  ‣ *Owner* : Mrf.zvx
+  ‣ *Sc By* : Mrf.zvx
+  ‣ *Owner* : Nabilla
   ‣ *Prefix* : ${prefix}
   ‣ *Total Block Contact* : ${blocked.length}
   ‣ *The bot is active on* : ${kyun(uptime)}
@@ -1062,7 +1067,7 @@ _“jauhilah api neraka, walau hanya dengan bersedekah sebiji kurma (sedikit). J
 
 *Pulsa :* _${Pulsa}_
 *Dana :* _${Dana}_
-*OVO :* _${Ovo}_`,
+*Gopay :* _${Gopay}_`,
 Lxa.sendMessage(from, hasil, text, {
   quoted: mek
 })
